@@ -1,0 +1,7 @@
+## A script that demonstrates the behavior of variables declared with var, let, and const when it comes to reassignment in JavaScript:
+
+var: Variables declared with var can be reassigned and redeclared within their scope.
+
+let: Variables declared with let can be reassigned but cannot be redeclared within the same scope.
+
+const: Variables declared with const cannot be reassigned or redeclared within the same scope. They must be initialized at the time of declaration.
