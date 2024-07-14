@@ -45,7 +45,7 @@ let myArray = [49, 30, 45, 25];
 console.log(typeof myArray);
 
 let myFunction = function () {};
-console.log(myFunction);
+console.log(typeof myFunction);
 
 //Reassign values
 

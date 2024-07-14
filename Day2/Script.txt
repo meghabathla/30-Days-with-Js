@@ -1,0 +1,34 @@
+## Activity6: Airthmetic operation
+
+
+Methods: Four methods (add, subtract, multiply, and divide) are defined to perform the respective arithmetic operations.
+add(): Returns the sum of num1 and num2.
+subtract(): Returns the difference between num1 and num2.
+multiply(): Returns the product of num1 and num2.
+divide(): Returns the quotient of num1 divided by num2. If num2 is zero, it returns an error message to avoid division by zero.
+
+## Comparision & Logical operation 
+
+
+Comparison Methods: Several methods are defined to perform comparison operations:
+
+isEqual(): Checks if num1 is equal to num2.
+isNotEqual(): Checks if num1 is not equal to num2.
+isGreaterThan(): Checks if num1 is greater than num2.
+isLessThan(): Checks if num1 is less than num2.
+isGreaterThanOrEqual(): Checks if num1 is greater than or equal to num2.
+isLessThanOrEqual(): Checks if num1 is less than or equal to num2.
+
+
+Logical Methods: Methods are defined to perform logical operations:
+
+andOperation(): Performs a logical AND between num1 and num2.
+orOperation(): Performs a logical OR between num1 and num2.
+notOperation(): Performs a logical NOT on num1.
+
+
+## Terinary operator
+
+The ternary operator (? :) is a shorthand for the if-else statement.
+It takes three operands: a condition, a result for true, and a result for false.
+The syntax is condition ? exprIfTrue : exprIfFalse.

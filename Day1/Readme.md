@@ -69,10 +69,10 @@ In this script:
 - myNumber is a number.
 - myBoolean is a boolean.
 - myUndefined is undefined.
-- myNull is null.
+- myNull is object.
 - myObject is an object.
 - myArray is an an object.
-- myFunction is a function.
+- myFunction is a function/callable object
 - mySymbol is a symbol.
 
 Note- that for myNull, typeof returns "object" due to a well-known quirk in JavaScript. For mySymbol, toString() is used to convert the symbol to a string for logging purposes.
