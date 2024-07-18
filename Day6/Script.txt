@@ -1,0 +1,14 @@
+pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.
+push() method of Array instances adds the specified elements to the end of an array and returns the new length of the array.
+shift() method of Array instances removes the first element from an array and returns that removed element. This method changes the length of the array.
+unshift() method of Array instances adds the specified elements to the beginning of an array and returns the new length of the array.
+
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
