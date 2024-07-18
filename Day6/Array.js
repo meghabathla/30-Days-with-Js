@@ -43,3 +43,19 @@ const myArray = [
 ];
 console.log(myArray);
 console.log(myArray[1][0]);
+
+//Another way
+
+const matrix = [];
+
+function arrMatrix(row, col) {
+  for (let i = 0; i < row; i++) {
+    matrix.push([]);
+    for (let j = 0; j < col; j++) {
+      matrix[i].push(i * j + 1);
+    }
+  }
+  return matrix;
+}
+console.log(arrMatrix(3, 3));
+console.log(matrix[0][2]);
