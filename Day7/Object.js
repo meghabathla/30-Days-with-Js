@@ -56,3 +56,6 @@ library.books.forEach((book) => console.log(book.title));
 for (const index in library.books) {
   console.log(library.books[index].notebook);
 }
+console.log(Object.keys(library));
+
+console.log(Object.values(library));
