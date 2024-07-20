@@ -65,3 +65,27 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 }
 */
 ```
+
+## for in
+
+for in loop is typically used to iterate over the enumerable properties of an object. However, when dealing with arrays, it’s generally better to use a for...of loop or array methods like forEach, map, etc., because a for...in loop can iterate over properties that are not part of the array, such as methods or inherited properties.
+
+```js
+const library = {
+  name: "Arvind Kaushikh",
+  books: [
+    {
+      title: "Hello",
+      notebook: "Ajanta",
+    },
+    {
+      title: "World map",
+      notebook: "Classic",
+    },
+  ],
+};
+
+for (const index in library.books) {
+  console.log(library.books[index].title);
+}
+```
