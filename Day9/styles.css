@@ -1,0 +1,14 @@
+.child {
+  color: brown;
+}
+
+.ui-color {
+  color: blueviolet;
+}
+
+.btn-add-content {
+  background-color: aquamarine;
+  padding: 0.4rem;
+  margin: 1rem;
+  color: darkslategrey;
+}
