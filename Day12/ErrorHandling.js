@@ -44,7 +44,7 @@ class customError extends Error {
 }
 function throwError() {
   try {
-    throw new customError("This is a custom error msg");
+    throw new Error("This is a custom error msg");
   } catch (error) {
     console.log(error);
   }
