@@ -47,3 +47,26 @@ select.addEventListener("change", (e) => {
 });
 
 //Activity5: Event Delegation
+
+const ul = document.querySelector(".ul");
+ul.addEventListener("click", (e) => {
+  if (e.target.nodeName == "LI") console.log(e.target.innerText);
+});
+
+const parentUi = document.querySelector(".parent-ul");
+const buttonLi = document.querySelector(".btn-addLi");
+let item = 3;
+
+parentUi.addEventListener("click", (e) => {
+  if (e.target && e.target.nodeName === "LI") {
+    console.log(e.target.innerText);
+  }
+});
+
+buttonLi.addEventListener("click", () => {
+  item++;
+  const li = document.createElement("li");
+  li.innerText = `Item ${item}`;
+  li.className = "li-4";
+  parentUi.appendChild(li);
+});
