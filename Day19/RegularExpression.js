@@ -64,9 +64,33 @@ if (getMatched) {
 } else {
   console.log(`Not found`);
 }
-console.log(getMatched[0]);
-if (getMatched) {
-  console.log(`Found in the end of string`, getMatched[myStr.length - 1]);
+const regexEndWord = new RegExp(`${firstWord}\\b$`);
+const getMatchedEnd = myStr.match(regexEndWord);
+
+if (getMatchedEnd) {
+  console.log(`Found at the end of string`, getMatchedEnd[0]);
 } else {
-  console.log(`Not found`);
+  console.log(`Not found at the end`);
+}
+
+//Activity5: Practical Application
+
+const strPassword = `P@123hvd`;
+const regexPassword =
+  /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$#%&*?!])[A-Za-z\d@$!%*?&]{8,}$/;
+
+if (regexPassword.test(strPassword)) {
+  console.log(`Password is valid`);
+} else {
+  console.log(`Invalid password`);
+}
+
+const strURL = `https://courses.chaicode.com/`;
+const regexURL =
+  /^(https?:\/\/)?((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|\d{1,3}(\.\d{1,3}){3}|localhost)(:\d+)?(\/[-a-z\d%_.~+]*)*(\?[;&a-z\d%_.~+=-]*)?(\#[-a-z\d_]*)?$/i;
+
+if (regexURL.test(strURL)) {
+  console.log(`Valid url`);
+} else {
+  console.log(`Invalid url`);
 }

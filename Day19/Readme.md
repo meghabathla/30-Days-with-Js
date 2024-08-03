@@ -1,3 +1,46 @@
+# Key Differences bwteen Test and Match in Regular Expression
+
+Return Type:
+
+- test: Returns a boolean (true or false).
+- match: Returns an array of matches or null.
+
+Purpose:
+
+- test: To check if a pattern exists in a string.
+- match: To retrieve the actual matches from a string.
+
+Usage Context:
+
+- Use test when you only care about the existence of a match.
+- Use match when you need the actual matched values or details about the matches.
+  Examples of Both in Action
+  Using test:
+
+```js
+const regex = /\d/;
+const str = "There are 3 apples";
+if (regex.test(str)) {
+  console.log("The string contains a digit.");
+} else {
+  console.log("The string does not contain a digit.");
+}
+// Output: "The string contains a digit."
+```
+
+```js
+Using match:
+
+javascript
+Copy code
+const regex = /\d+/g;
+const str = "There are 3 apples and 10 oranges";
+const matches = str.match(regex);
+console.log(matches); // Output: ["3", "10"]
+```
+
+In this match example, it finds all sequences of digits in the string and returns an array of matches.
+
 ## Regex
 
 Let's break down the regex /\b[A-Z][a-z]\*\b/g in simple terms:
