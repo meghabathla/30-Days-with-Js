@@ -8,7 +8,8 @@
 
 ## Session Storage
 
-- Definition: Session storage is similar to local storage but with a key difference in the persistence of the data. It stores data for the duration of the page session.
+- Definition: Session storage is similar to local storage but with a key difference in the persistence of the data. It stores data for the duration of the page session. Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab. That page session is valid only for that particular tab. Opening multiple tabs/windows with the same URL creates sessionStorage for each tab/window.
+
 - Persistence: Data in session storage is cleared when the page session ends. A page session lasts as long as the browser is open, and survives over page reloads and restores. However, opening a page in a new tab or window will cause a new session to be initiated.
 - Capacity: Like local storage, session storage typically allows up to 5MB of data.
 - Scope: Data is accessible only within the same origin and for the duration of the page session.
