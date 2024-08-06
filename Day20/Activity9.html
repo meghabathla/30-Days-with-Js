@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage Example</title>
+  </head>
+  <body>
+    <script>
+      function store(key, value) {
+        const user = {
+          [key]: value,
+        };
+        localStorage.setItem("data", JSON.stringify(user));
+        sessionStorage.setItem("data", JSON.stringify(user));
+      }
+
+      function retrieve() {
+        const result = JSON.parse(localStorage.getItem("data"));
+        const res = JSON.parse(sessionStorage.getItem("data"));
+        console.log(`from local storage`, result);
+        console.log(`from session storage`, res);
+      }
+
+      store("name", "megha");
+      retrieve();
+    </script>
+  </body>
+</html>

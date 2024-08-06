@@ -1,0 +1,34 @@
+<!-- write a script to save a string value to a local storage and retrieve it.  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+  </head>
+  <body>
+    <label for="inputValue" class="lebel">Enter the value</label>
+    <input type="text" class="inputValue" id="inputValue" />
+    <button onclick="saveToSessionStorage()" class="button-save-value">
+      Save
+    </button>
+    <button
+      onclick="retrieveFromSessionStorage()"
+      class="button-retrieve-value"
+    >
+      Retrieve
+    </button>
+    <p class="para-retrieve"></p>
+    <script>
+      function saveToSessionStorage() {
+        const input = document.querySelector(".inputValue").value;
+        sessionStorage.setItem("input", input);
+        alert("Save to Session storage");
+      }
+      function retrieveFromSessionStorage() {
+        const getValue = sessionStorage.getItem("input");
+        document.querySelector(".para-retrieve").innerText = getValue;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+  </head>
+  <body onload="retrieveFromSessionStorage()">
+    <form onsubmit="event.preventDefault();  saveToSessionStorage()">
+      <label for="" class="label-text">Enter username</label>
+      <input type="text" class="input-user" /> <br />
+      <br />
+      <label for="" class="label-email">Enter email</label>
+      <input type="text" class="input-email" /> <br />
+      <br />
+
+      <button type="submit" class="button-save-value">Save</button>
+      <button
+        type="button"
+        onclick="retrieveFromSessionStorage()"
+        class="button-retrieve-value"
+      >
+        Retrieve
+      </button>
+      <p class="para-retrieve"></p>
+    </form>
+    <script>
+      function saveToSessionStorage() {
+        const name = document.querySelector(".input-user").value;
+        const email = document.querySelector(".input-email").value;
+
+        const user = {
+          name: name,
+          email: email,
+        };
+        sessionStorage.setItem("data", JSON.stringify(user));
+      }
+      function retrieveFromSessionStorage() {
+        const data = JSON.parse(sessionStorage.getItem("data"));
+        const display = document.querySelector(".para-retrieve");
+
+        display.innerText = `loading data of user ${data.name} and email ${data.email}`;
+      }
+    </script>
+  </body>
+</html>
