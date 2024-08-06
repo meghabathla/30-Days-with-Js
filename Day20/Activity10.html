@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage Example</title>
+  </head>
+  <body>
+    <script>
+      function store(key, value) {
+        const user = {
+          [key]: value,
+        };
+        localStorage.setItem("data", JSON.stringify(user));
+        sessionStorage.setItem("data", JSON.stringify(user));
+      }
+
+      function remove() {
+        const result = localStorage.removeItem("data");
+        const res = sessionStorage.removeItem("data");
+        console.log(`from local storage`, result);
+        console.log(`from session storage`, res);
+      }
+
+      store("name", "megha");
+      remove();
+    </script>
+  </body>
+</html>
