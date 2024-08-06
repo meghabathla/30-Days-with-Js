@@ -1,0 +1,31 @@
+<!-- write a script to save a string value to a local storage and retrieve it.  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <label for="inputValue" class="lebel">Enter the value</label>
+    <input type="text" class="inputValue" id="inputValue" />
+    <button onclick="saveToLocalStorage()" class="button-save-value">
+      Save
+    </button>
+    <button onclick="retrieveFromLocalStorage()" class="button-retrieve-value">
+      Retrieve
+    </button>
+    <p class="para-retrieve"></p>
+    <script>
+      function saveToLocalStorage() {
+        const input = document.querySelector(".inputValue").value;
+        localStorage.setItem("input", input);
+        alert("Save to local storage");
+      }
+      function retrieveFromLocalStorage() {
+        const getValue = localStorage.getItem("input");
+        document.querySelector(".para-retrieve").innerText = getValue.name;
+      }
+    </script>
+  </body>
+</html>

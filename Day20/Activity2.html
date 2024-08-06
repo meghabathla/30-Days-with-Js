@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <label for="" class="label-text">Enter username</label>
+    <input type="text" class="input-user" /> <br />
+    <br />
+    <label for="" class="label-email">Enter email</label>
+    <input type="text" class="input-email" /> <br />
+    <br />
+    <label for="" class="label-age">Enter age</label>
+    <input type="text" class="input-age" /> <br />
+    <br />
+    <button onclick="saveToLocalStorage()" class="button-save-value">
+      Save
+    </button>
+    <button onclick="retrieveFromLocalStorage()" class="button-retrieve-value">
+      Retrieve
+    </button>
+    <p class="para-retrieve"></p>
+    <script>
+      function saveToLocalStorage() {
+        const name = document.querySelector(".input-user").value;
+        const email = document.querySelector(".input-email").value;
+        const age = document.querySelector(".input-age").value;
+        const user = {
+          name: name,
+          email: email,
+          age: age,
+        };
+
+        localStorage.setItem("data", JSON.stringify(user));
+        alert("Object save to local storage");
+      }
+      function retrieveFromLocalStorage() {
+        const data = JSON.parse(localStorage.getItem("data"));
+        const display = document.querySelector(".para-retrieve");
+        display.innerText = `Retrieve the object name ${data.name} and age is ${data.age} with email is ${data.email}`;
+      }
+    </script>
+  </body>
+</html>
