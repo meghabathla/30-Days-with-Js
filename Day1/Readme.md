@@ -76,3 +76,23 @@ In this script:
 - mySymbol is a symbol.
 
 Note- that for myNull, typeof returns "object" due to a well-known quirk in JavaScript. For mySymbol, toString() is used to convert the symbol to a string for logging purposes.
+
+## difference between Undefined and not defined in js
+
+- undefined: A variable is undefined when it has been declared but has not been assigned a value.
+  For example:
+
+```js
+let a;
+console.log(a); // Output: undefined
+```
+
+Here, the variable a is declared but not initialized, so it holds the value undefined.
+
+- not defined: A variable is "not defined" when it has not been declared at all in the current scope.
+  Attempting to access a variable that hasn't been declared will result in a ReferenceError.
+  For example:
+
+```js
+console.log(b); // ReferenceError: b is not defined
+```
