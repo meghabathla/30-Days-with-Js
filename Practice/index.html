@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <button popovertarget="popup">Pop</button>
+    <div id="popup" popover>This is the message</div>
+    <br />
+    <br /><br />
+    <details>
+      <summary>hello megha, click me</summary>
+      hehehhe
+    </details>
+    <br /><br /><br />
+    <dialog><p>this is a dailog box</p></dialog>
+    <button onclick="openMe()">open dailog</button>
+
+    <script>
+      function openMe() {
+        document.querySelector("dialog").showModal();
+      }
+    </script>
+  </body>
+</html>
+
+<!-- // var Test = React.createClass({
+    //   onClick: function(event){
+    //      func1();
+    //      func2();
+    //   },
+    //   render: function(){
+    //      return (
+    //         <a href="#" onClick={this.onClick}>Test Link</a>
+    //      );
+    //   }
+    // }); -->

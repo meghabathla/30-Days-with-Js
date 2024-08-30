@@ -1,0 +1,14 @@
+#popup {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  margin: 0 auto;
+  background: rgb(50, 50, 50);
+  color: beige;
+  font-family: poppins;
+}
+@keyframes slide {
+  from {
+    transform: translateY(-100px);
+  }
+}
