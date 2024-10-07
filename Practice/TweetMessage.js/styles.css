@@ -2,16 +2,50 @@
   display: flex;
   flex-direction: row;
   border: 1px solid black;
-  width: 50%;
+  width: 45%;
   padding: 10px;
   border-radius: 20px;
 }
 .details {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .title {
   display: flex;
   flex-direction: row;
+  gap: 6px;
+}
+
+#img {
+  max-width: 40px;
+  max-height: 850px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+.message {
+  margin-right: 6px;
+}
+.messagecount {
+  margin-right: 60px;
+}
+
+.retweet {
+  margin-right: 6px;
+}
+.retweetcount {
+  margin-right: 60px;
+}
+
+.like {
+  margin-right: 6px;
+}
+.likecount {
+  margin-right: 60px;
 }
