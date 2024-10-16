@@ -8,9 +8,12 @@ function printName(city, state) {
   );
 }
 
-Function.prototype.myCall = function (context = {}, ...args) {
+Function.prototype.myApply = function (context = {}, args = []) {
   if (typeof this !== "function") throw new Error(this + "is not callable");
+  if (!Array.isArray(args))
+    throw new TypeError("CreateListFromArrayLike called on non object");
   context.func = this;
   context.func(...args);
 };
-printName.myCall(object, "Muzaffarnagar", "Uttar Pradesh");
+
+printName.myApply(object, ["Muzaffarnagar", "Uttar Pradesh"]);

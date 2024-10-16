@@ -18,3 +18,15 @@ Function.prototype.myBind = function (...args) {
 
 const res = printName.myBind(object, "Muzaffarnagar");
 res("UP");
+
+// Another way
+
+Function.prototype.myBind2 = function (context = {}, ...args) {
+  const funct = this;
+  return function (...args2) {
+    context.funct = funct;
+    context.funct(...args, ...args2);
+  };
+};
+const result = printName.myBind2(object, "MuzaffarNagar");
+result("Uttar Pradesh");
