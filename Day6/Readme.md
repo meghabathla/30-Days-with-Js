@@ -61,6 +61,7 @@ console.log(firstElement);
 
 ## Map
 
+Transforms each element of an array and returns a new array.
 The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
 
 ```js
