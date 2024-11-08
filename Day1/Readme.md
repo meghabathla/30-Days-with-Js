@@ -23,6 +23,7 @@ console.log(letVariable); // Output: "Reassigned value"
 
 // Redeclaring let (this will throw an error)
 // let letVariable = "Redeclared value"; // Uncommenting this line will cause a SyntaxError
+//"SyntaxError: Identifier 'variableName' has already been declared"
 
 // Using const
 const constVariable = "Initial value";
@@ -30,9 +31,11 @@ console.log(constVariable); // Output: "Initial value"
 
 // Reassigning const (this will throw an error)
 // constVariable = "Reassigned value"; // Uncommenting this line will cause a TypeError
+// "TypeError: Assignment to constant variable."
 
 // Redeclaring const (this will also throw an error)
 // const constVariable = "Redeclared value"; // Uncommenting this line will cause a SyntaxError
+//"SyntaxError: Identifier 'constVariable' has already been declared"
 ```
 
 ## A script that declares variables of different data types and logs both their values and types to the console:
@@ -75,7 +78,9 @@ In this script:
 - myFunction is a function/callable object
 - mySymbol is a symbol.
 
-Note- that for myNull, typeof returns "object" due to a well-known quirk in JavaScript. For mySymbol, toString() is used to convert the symbol to a string for logging purposes.
+Note- that for myNull, typeof returns "object" due to a well-known quirk in JavaScript.Historically, it was due to a bug in the original implementation, and it has been maintained for backward compatibility. Although null represents the absence of any object value, typeof null returns "object" instead of "null" or something else.
+
+For mySymbol, toString() is used to convert the symbol to a string for logging purposes.
 
 ## difference between Undefined and not defined in js
 

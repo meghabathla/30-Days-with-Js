@@ -4,17 +4,15 @@ const getData = () => {
   console.log("fetching data", counter++);
 };
 
-function doSomeMagic(fn, delay) {
+const debouncing = function (func, delay) {
   let timer;
   return function () {
     let context = this,
       args = arguments;
     clearTimeout(timer);
-
     timer = setTimeout(() => {
-      fn.apply(context, args);
+      func.apply(context, args);
     }, delay);
   };
-}
-
-const getFunc = doSomeMagic(getData, 300);
+};
+const betterFunc = debouncing(getData, 300);
